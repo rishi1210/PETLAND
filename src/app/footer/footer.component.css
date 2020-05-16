@@ -1,0 +1,17 @@
+ul li{
+    color: #B2B2B2;
+}
+ul li :hover
+{
+    color:white;
+}
+footer{
+    font-family: "Quicksand", sans-serif;
+    font-size: 100%;
+    text-align: justify;
+    font-weight: 50;
+}
+.copyright{
+    color:#B2B2B2;
+    padding-left:30%;
+}

@@ -1,0 +1,33 @@
+
+<app-menu></app-menu>
+<!DOCTYPE html>
+<!--<app-menu></app-menu>-->
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Ensures optimal rendering on mobile devices. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
+  <style>
+      html,body{
+          background-color: black;
+          height:100vh;
+      }
+      h3{
+          color:white;
+          font-family: sans-serif;
+          padding:10px;
+      }
+      .btn{
+               padding-right: 40px;
+               padding-left: 140px;
+               padding-top:170px;
+      }
+  </style>
+</head>
+
+<body>
+
+    <div class=' btn pm-button'  ><h3>Your amount is {{total}} Rs only/-<br><br>Click on PayNow to initiate your payment through PayUMoney Gateway</h3><a href='https://www.payumoney.com/paybypayumoney/#/12AD31A64265955BF1E0788D61F3CBC0'><img  src='https://www.payumoney.com/media/images/payby_payumoney/new_buttons/23.png' /></a></div> 
+   <br>
+    <app-footer></app-footer>
+</body>
+</html>

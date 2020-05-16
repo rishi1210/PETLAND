@@ -1,0 +1,269 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,600');
+
+
+html,
+body {
+    
+    color:white;
+    background-color: #111;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+    height:100%;
+}
+.badge:hover{
+    background-color:white;
+}
+#lblCartCount :hover{
+    color:white;
+    background-color: white;
+}
+#lblCartCount {
+    font-size:20px;
+    background: #E3E4E3;
+    color: black;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+}
+.badge {
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 11px;
+  margin-bottom: 0px;;
+}
+
+.label-light[href],
+.badge-light[href] {
+  background-color:#111;
+}
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codpen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+
+.nav {
+    width: 100%;
+    height:65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    z-index:2;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 2rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #B2B2B2;
+    font-size: 2.0rem;
+}
+
+.nav div.logo a:hover {
+    color:white;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #B2B2B2;
+    line-height: 65px;
+    font-size: 1.5rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color:white;
+}
+
+
+/* Home section */
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+    
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+
+.affix {
+    padding:0px;
+    background-color: #111;
+}
+#tag{
+    text-align: justify;
+	padding-left:30%;
+    padding-right:5%;
+    padding-top: 15%;
+    font-size: 30px;
+   
+}
+
+#caption{
+
+    text-align: justify;
+	padding-left:25%;
+    padding-right:15%;
+    padding-top: 3%;
+    font-size: 20px;
+    color:#cccccc;
+}
+#caption:hover{
+    color:white;
+}
+
+.myH{
+    text-align:center;
+    font-size: 2.0rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+.myH2 {
+	text-align:center;
+    font-size: 2.5rem;
+    font-family: "Quicksand", sans-serif;
+}
+.myP {
+	text-align: justify;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 20px;
+}
+@media all and (max-width:700px){
+	.myP {
+		padding:2%;
+	}
+}
+        </style>
+    </head>
+<body>
+<nav class="nav">
+    <div class="container">
+        <div class="logo">
+            <a routerLink="/menu">PETLAND</a>
+        </div>
+        <div id="mainListDiv" class="main_list">
+            <ul class="navlinks">
+                <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                data-targe=".navbar-collapse" *ngIf="!loggedIn" ><a href="#about"><i class="fas fa-id-card-alt"></i>About</a></li>
+                <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                data-targe=".navbar-collapse" *ngIf="!loggedIn"><a  routerLink="/login"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                  <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                 data-targe=".navbar-collapse" *ngIf="!loggedIn"><a  routerLink="/signup"><i class="fas fa-user-plus"></i>SignUp</a></li>
+                 <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                 data-targe=".navbar-collapse" *ngIf="loggedIn"><a  routerLink="/vaccine"><i class="fas fa-hospital"></i>Vaccine</a></li>
+                 <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                 data-targe=".navbar-collapse" *ngIf="loggedIn"><a  routerLink="/grooming"><i class="fas fa-shower"></i>Grooming</a></li>
+                 <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                data-targe=".navbar-collapse" *ngIf="!loggedIn" ><a routerLink="/"><i class="fas fa-user-circle"></i>Contact</a></li>
+                <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                data-targe=".navbar-collapse"*ngIf="loggedIn" ><a routerLink="/cart"> <i class="fas fa-cart-plus"></i> <span class='badge badge-light' id='lblCartCount'> {{lalcount}} </span>Cart </a></li>
+                <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                data-targe=".navbar-collapse"*ngIf="loggedIn" ><a routerLink="/products"> <i class="fas fa-paw"></i>Pets </a></li>
+ 
+                <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                data-targe=".navbar-collapse" *ngIf="loggedIn"  (click)="logout()"><a href="##"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+ 
+            </ul>
+        </div>
+        <span class="navTrigger">
+            <i></i>
+            <i></i>
+            <i></i>
+
+        </span>
+    </div>
+</nav>
+</body>
+</html>

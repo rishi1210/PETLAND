@@ -1,0 +1,850 @@
+
+<html>
+        <head>
+            <title>Product page</title>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+        
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+            <style>
+              badge:hover{
+    background-color:white;
+}
+#lblCartCount :hover{
+    color:white;
+    background-color: white;
+}
+#lblCartCount {
+    font-size:20px;
+    background: #E3E4E3;
+    color: black;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px;
+}
+.badge {
+  padding-left: 6px;
+  padding-right: 6px;
+  border-radius: 11px;
+  margin-bottom: 0px;;
+}
+
+.label-light[href],
+.badge-light[href] {
+  background-color:#111;
+}
+/*-- Inspiration taken from abdo steif -->
+/* --> https://codpen.io/abdosteif/pen/bRoyMb?editors=1100*/
+
+/* Navbar section */
+
+.nav {
+    width: 100%;
+    height:65px;
+    position: fixed;
+    line-height: 65px;
+    text-align: center;
+    z-index: 2;
+}
+
+.nav div.logo {
+    float: left;
+    width: auto;
+    height: auto;
+    padding-left: 2rem;
+}
+
+.nav div.logo a {
+    text-decoration: none;
+    color: #B2B2B2;
+    font-size: 2.0rem;
+}
+
+.nav div.logo a:hover {
+    color:white;
+}
+
+.nav div.main_list {
+    height: 65px;
+    float: right;
+}
+
+.nav div.main_list ul {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav div.main_list ul li {
+    width: auto;
+    height: 65px;
+    padding: 0;
+    padding-right: 3rem;
+}
+
+.nav div.main_list ul li a {
+    text-decoration: none;
+    color: #B2B2B2;
+    line-height: 65px;
+    font-size: 1.5rem;
+}
+
+.nav div.main_list ul li a:hover {
+    color:white;
+}
+
+
+/* Home section */
+.navTrigger {
+    display: none;
+}
+
+.nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    
+}
+
+
+/* Media qurey section */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .navTrigger {
+        display: block;
+    }
+    .nav div.logo {
+        margin-left: 15px;
+    }
+    .nav div.main_list {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+    .nav div.show_list {
+        height: auto;
+        display: none;
+    }
+    .nav div.main_list ul {
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: #111;
+        /*same background color of navbar*/
+        background-position: center top;
+    }
+    .nav div.main_list ul li {
+        width: 100%;
+        text-align: right;
+    }
+    .nav div.main_list ul li a {
+        text-align: center;
+        width: 100%;
+    
+        padding: 20px;
+    }
+    .nav div.media_button {
+        display: block;
+    }
+}
+
+
+.affix {
+    padding:0px;
+    background-color: #111;
+}
+#tag{
+    text-align: justify;
+	padding-left:30%;
+    padding-right:5%;
+    padding-top: 15%;
+    font-size: 30px;
+   
+}
+
+#caption{
+
+    text-align: justify;
+	padding-left:25%;
+    padding-right:15%;
+    padding-top: 3%;
+    font-size: 20px;
+    color:#cccccc;
+}
+#caption:hover{
+    color:white;
+}
+
+.myH{
+    text-align:center;
+    font-size: 2.0rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+.myH2 {
+	text-align:center;
+    font-size: 2.5rem;
+    font-family: "Quicksand", sans-serif;
+}
+.myP {
+	text-align: justify;
+	padding-left:15%;
+	padding-right:15%;
+	font-size: 20px;
+}
+@media all and (max-width:700px){
+	.myP {
+		padding:2%;
+	}
+}
+                html,body{
+                    background-color: black;
+                    height:100%;
+                    font-family: "Quicksand", sans-serif;
+                }
+                #jumbo{
+                    margin-top:70px;
+                    padding:30px;
+                }
+                .thumbnail{
+                  padding:10px;
+                }
+                
+                #down{
+                    padding-top:0px;
+                    margin-top:10px;
+                }
+                 #space{
+                    padding-top:5px;
+                    margin-top:-18px;
+                    margin-bottom:-10px;
+                }
+                .yoyo{
+                  padding-right:35%;
+                }
+               
+            </style>
+            
+        </head>
+        <body>
+          <nav class="nav">
+            <div class="container">
+                <div class="logo">
+                    <a routerLink="/menu">PETLAND</a>
+                </div>
+                <div id="mainListDiv" class="main_list">
+                    <ul class="navlinks">
+                        <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                        data-targe=".navbar-collapse" *ngIf="!loggedIn" ><a href="#about"><i class="fas fa-id-card-alt"></i>About</a></li>
+                        <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                        data-targe=".navbar-collapse" *ngIf="!loggedIn"><a  routerLink="/login"><i class="fas fa-sign-in-alt"></i>Login</a></li>
+                          <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                         data-targe=".navbar-collapse" *ngIf="!loggedIn"><a  routerLink="/signup"><i class="fas fa-user-plus"></i>SignUp</a></li>
+                         <li class="nav-item" routerLinkActive="active" *ngIf="!loggedIn" data-toggle="collapse"
+                        data-targe=".navbar-collapse" ><a routerLink="/"><i class="fas fa-user-circle"></i>Contact</a></li>
+                        <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                        data-targe=".navbar-collapse"*ngIf="loggedIn" ><a routerLink="/cart"> <i class="fas fa-cart-plus"></i> <span class='badge badge-light' id='lblCartCount'> {{cartnum}} </span>Cart </a></li>
+                        <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                        data-targe=".navbar-collapse" ><a routerLink="/products"><i class="fas fa-paw"></i>Pets</a></li>
+                        <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                        data-targe=".navbar-collapse" *ngIf="loggedIn"><a  routerLink="/vaccine"><i class="fas fa-hospital"></i>Vaccine</a></li>
+                        <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                        data-targe=".navbar-collapse" *ngIf="loggedIn"><a  routerLink="/grooming"><i class="fas fa-shower"></i>Grooming</a></li>
+                       
+                        <li class="nav-item" routerLinkActive="active" data-toggle="collapse"
+                        data-targe=".navbar-collapse" *ngIf="loggedIn"  (click)="logout()"><a href="##"><i class="fas fa-sign-out-alt"></i>Log Out</a></li>
+         
+                    </ul>
+                </div>
+                <span class="navTrigger">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+        
+                </span>
+            </div>
+        </nav>
+        
+            <div style="background-color: black;">...</div>
+            <div class="container">
+            <div class="jumbotron" id="jumbo">
+                
+                  <h1 class="display-4" style="padding-left:10%;">WELCOME TO OUR PETLAND</h1>
+                  <h3 class="lead" style="padding-left:30%;">Come and get your best ,trustworthy pets</h3>
+                
+              </div>
+                <div class="row">
+                    
+                    <div class="col">
+                        <div class="img-thumbnail" style="height:100%;width:82%;" >
+                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQAnUei6II8meSBhmNSegzIo4mcm6rTzhtqu4Xrlza6R7d3SR7A&usqp=CAU" style="z-index:auto;">
+                        <div class="caption">
+            
+                            <h2>Shibha Inu</h2>
+                            
+                            <p>price:Rs.36000.00</p>     
+                     <button class="btn btn-block btn-dark" data-toggle="modal" data-target="#exampleModalLong" >Know More</button><br>
+                     <button  class="btn btn-block btn-dark" (click)="save1('36000','Shibha Inu')" > Add to cart </button>
+                     <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h2 class="modal-title" id="exampleModalLongTitle">Shibha Inu</h2>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>The Shiba Inu (柴犬, Japanese: [ɕiba̠ inɯ̟ᵝ]) is a Japanese breed of hunting dog.<br> A small-to-medium breed, it is the smallest of the six original and distinct spitz breeds of dog native to Japan.<br>
+                            A small, agile dog that copes very well with mountainous terrain and hiking trails, the Shiba Inu was originally bred for hunting.<br><br><h4>Eymology</h4>Inu is the Japanese word for dog, but the origin of the prefix "Shiba" is less clear. The word shiba means "brushwood" in Japanese, and refers to a type of tree or shrub whose leaves turn red in the fall.<br><br><h4>Traits</h4>Weight	Male	10 kg (22 lb)
+                            Female	8 kg (18 lb)
+                            Height	Male	35 to 43 cm (14 to 17 in)
+                            Female	33 to 41 cm (13 to 16 in)
+                            Coat	double
+                            Color	Red, sesame, black and tan, or cream
+                            Litter size	3 puppies on average
+                            Life span	12–15 years<br><br><h4>Grooming</h4>These dogs are very clean, so grooming needs will likely be minimal. They naturally tend to hate to be wet or bathed, thus, it is very important to start accustomed when they are young. A Shiba Inu's coat is coarse; short to medium length with the outer coat being 2.5 to 3.2 cm (1 to 1 1⁄4 in) long, and is naturally waterproof so there is little need for regular bathing.<br><br><h4>Lifespan</h4>Their average life expectancy is from 12 to 15 years. Exercise, especially daily walks, is preferred for this breed to live a long and healthy life.[16] The oldest known Shiba, Pusuke, died at age 26 in early December 2011. Pusuke was the oldest dog alive at the time and lived three years less than the world record for longest living dog<br><br><h4>Furthur Reference</h4>know much more about this breed in just one click <a href="https://en.wikipedia.org/wiki/Shiba_Inu">Wiki Info</a></p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" (click)="accessories()">Know Accessories</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+        </div>
+                            
+                    </div>
+                </div><br><br>
+                <div class="col">
+                    <div class="img-thumbnail"style="height:100%;width:82%;" >
+                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTX3TXfx73iEnRwCK5wG1sYSjORXlQvk2_NwEWAjpCE6807qFdH&usqp=CAU" >
+                    <div class="caption">
+        
+                        <h2>Golden Retriever</h2>
+                        
+                        <p>price:Rs.36000.00</p>
+    
+                                
+                        
+                 <button class="btn btn-block btn-dark"  >Know More</button><br>
+                 
+     
+                 <button  class="btn btn-block btn-dark" (click)="save1('36000','Golden Retriever')" data-toggle="modal" data-target="#exampleModal"> Add to cart </button>
+     
+      <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"  *ngIf="this.modalflag==true" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Your Item added successfully
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+                
+    </div>
+                        
+                </div>
+            </div><br><br>
+            <div class="col">
+                <div class="img-thumbnail" style="height:100%;width:82%;">
+                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTRMU5TvLIrLhUGH9Q-U5z2yrsr33kiNgzSS_PoxlCwuOsmf-gU&usqp=CAU">
+                <div class="caption">
+    
+                    <h2>Pug</h2>
+                    
+                    <p>price:Rs.36000.00</p>
+
+                            
+                    
+             <button class="btn btn-block btn-dark"  >Know More</button><br>
+             
+ 
+             <button  class="btn btn-block btn-dark" (click)="save1('36000','Pug')" data-toggle="modal" data-target="#exampleModal"> Add to cart </button>
+ 
+  <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"  *ngIf="this.modalflag==true" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Your Item added successfully
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+            
+</div>
+                    
+            </div>
+        </div><br><br><hr>
+        <div class="col mt-3">
+            <div class="img-thumbnail" style="height:100%;width:80%;">
+             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR1MRahyWIy9qbexLE4b0qkDQ1nNSzp68mXsn_ooH_mDGWDJ8LQ&usqp=CAU" >
+            <div class="caption">
+
+                <h2>English Cocker</h2>
+                
+                <p>price:Rs.36000.00</p>
+
+                        
+                
+         <button class="btn btn-block btn-dark"  >know More</button><br>
+         
+
+         <button  class="btn btn-block btn-dark" (click)="save1('36000','English Cocker')" data-toggle="modal" data-target="#exampleModal"> Add to cart </button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"  *ngIf="this.modalflag==true" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Your Item added successfully
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+  </div>
+</div>
+</div>
+        
+</div>
+                
+        </div>
+    </div><br><br>
+                <div class="col mt-4">
+                    <div class="img-thumbnail" style="width:82%;height:100%;">
+                        <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSlheHe-RUarkF9fUe7RsdeS6ezvDtz2p5O75IO1A1bkllUheGS&usqp=CAU" >
+                        <div class="caption">
+            
+                            <h2>Bernese Dog</h2>
+                            
+                            <p>price:Rs.36000.00</p>
+        
+                                    
+                            
+                     <button type ="submit" class="btn  btn-block btn-dark" data-toggle="modal" data-target="#exampleModalScrollable">Buy Now</button><br>
+                        
+                             <button class="btn btn-block btn-dark" (click)="save1('32000','Bernese Dog')"> Add to cart </button>
+                                           <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  ...
+
+                                                  lsbva;
+                                                  ak;containerlcmslmc
+                                                  smcklansk;cn
+                                                  a;8jRynLgenrzK57RvSG1C6nG4Ekho8ztwYHc8QHGflP8Adsmnjsqum6ey4o1GFsOBncACWuIjcARBnMg85KxRalbD5qgBqHHGzZa06TCz9Om6m5jj5XABzJfzwcuA9eqD17GlaVvMx5ad22rSeWuDmvLYJHPEdU16rwwGvo1PBZVqNgeICGTgwXUwcBuOknEKDjmwLbamWgeR7QcYAILTA7SRhUSyXHXYKhxad9lvhXV316pp068u5tbV2gkDmA4c
+                                                  sx;xN
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                  <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                           <!-- Button trigger modal -->
+
+  <!-- Modal -->
+                                    <!--
+
+                            <button type="submit" class="btn btn-primary btn-block"><a href="cart.php">Add to cart</a></button>
+                            -->
+                        </div>
+                            
+                            </div>
+                        </div>
+                        
+                <div class="col mt-4">
+                    <div class="img-thumbnail" style="width:82%;height:100%;">
+                        <img  src="data:image/jpeg;base64,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" >
+                        <div class="caption">
+            
+                            <h2>German Shepherd</h2>
+                            
+                            <p>price:Rs.36000.00</p>
+        
+                                    
+                            
+                     <button type ="submit" class="btn  btn-block btn-dark" data-toggle="modal" data-target="#exampleModalScrollable">Buy Now</button><br>
+                        
+                             <button class="btn btn-block btn-dark" (click)="save1('32000','German Shepherd')"> Add to cart </button>
+                                           <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                              <div class="modal-content">
+                                                <div class="modal-header">
+                                                  <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                  </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                  ...
+
+                                                  lsbva;
+                                                  ak;containerlcmslmc
+                                                  smcklansk;cn
+                                                  a;8jRynLgenrzK57RvSG1C6nG4Ekho8ztwYHc8QHGflP8Adsmnjsqum6ey4o1GFsOBncACWuIjcARBnMg85KxRalbD5qgBqHHGzZa06TCz9Om6m5jj5XABzJfzwcuA9eqD17GlaVvMx5ad22rSeWuDmvLYJHPEdU16rwwGvo1PBZVqNgeICGTgwXUwcBuOknEKDjmwLbamWgeR7QcYAILTA7SRhUSyXHXYKhxad9lvhXV316pp068u5tbV2gkDmA4c
+                                                  sx;xN
+                                                </div>
+                                                <div class="modal-footer">
+                                                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                  <button type="button" class="btn btn-primary">Save changes</button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+
+                                           <!-- Button trigger modal -->
+
+  <!-- Modal -->
+                                    <!--
+
+                            <button type="submit" class="btn btn-primary btn-block"><a href="cart.php">Add to cart</a></button>
+                            -->
+                        </div>
+                            
+                            </div>
+                        </div>
+                        <div class="col mt-4">
+                          <div class="img-thumbnail" style="width:82%;height:100%;">
+                              <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQQV06LYpCKOS_i-fQeLeX0XPT_jcCAivyt61Ru9TQRvDwHl2H7&usqp=CAU">
+                              <div class="caption">
+                  
+                                  <h2>Shih Tzu</h2>
+                                  
+                                  <p>price:Rs.36000.00</p>
+              
+                                          
+                                  
+                           <button type ="submit" class="btn  btn-block btn-dark" data-toggle="modal" data-target="#exampleModalScrollable">Buy Now</button><br>
+                              
+                                   <button class="btn btn-block btn-dark" (click)="save1('32000','Shih Tzu')"> Add to cart </button>
+                                                 <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                                  <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                                    <div class="modal-content">
+                                                      <div class="modal-header">
+                                                        <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                          <span aria-hidden="true">&times;</span>
+                                                        </button>
+                                                      </div>
+                                                      <div class="modal-body">
+                                                        ...
+      
+                                                        lsbva;
+                                                        ak;containerlcmslmc
+                                                        smcklansk;cn
+                                                        a;8jRynLgenrzK57RvSG1C6nG4Ekho8ztwYHc8QHGflP8Adsmnjsqum6ey4o1GFsOBncACWuIjcARBnMg85KxRalbD5qgBqHHGzZa06TCz9Om6m5jj5XABzJfzwcuA9eqD17GlaVvMx5ad22rSeWuDmvLYJHPEdU16rwwGvo1PBZVqNgeICGTgwXUwcBuOknEKDjmwLbamWgeR7QcYAILTA7SRhUSyXHXYKhxad9lvhXV316pp068u5tbV2gkDmA4c
+                                                        sx;xN
+                                                      </div>
+                                                      <div class="modal-footer">
+                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+      
+                                                 <!-- Button trigger modal -->
+      
+        <!-- Modal -->
+                                          <!--
+      
+                                  <button type="submit" class="btn btn-primary btn-block"><a href="cart.php">Add to cart</a></button>
+                                  -->
+                              </div>
+                                  
+                                  </div>
+                              </div>
+                              <div class="col mt-4 yoyo">
+                                <div class="img-thumbnail " style="width:82%;height:100%; ">
+                                    <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTLyShqhTyjNQms4nwECC6laT8WDm0qtfGgIWnR2_cMiLd5AtjF&usqp=CAU">
+                                    <div class="caption">
+                        
+                                        <h2>Boxer</h2>
+                                        
+                                        <p>price:Rs.36000.00</p>
+                    
+                                                
+                                        
+                                 <button type ="submit" class="btn  btn-block btn-dark" data-toggle="modal" data-target="#exampleModalScrollable">Buy Now</button><br>
+                                    
+                                         <button class="btn btn-block btn-dark" (click)="save1('32000','Boxer')"> Add to cart </button>
+                                                       <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                                          <div class="modal-content">
+                                                            <div class="modal-header">
+                                                              <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+                                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                              </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                              ...
+            
+                                                              lsbva;
+                                                              ak;containerlcmslmc
+                                                              smcklansk;cn
+                                                              a;8jRynLgenrzK57RvSG1C6nG4Ekho8ztwYHc8QHGflP8Adsmnjsqum6ey4o1GFsOBncACWuIjcARBnMg85KxRalbD5qgBqHHGzZa06TCz9Om6m5jj5XABzJfzwcuA9eqD17GlaVvMx5ad22rSeWuDmvLYJHPEdU16rwwGvo1PBZVqNgeICGTgwXUwcBuOknEKDjmwLbamWgeR7QcYAILTA7SRhUSyXHXYKhxad9lvhXV316pp068u5tbV2gkDmA4c
+                                                              sx;xN
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                              <button type="button" class="btn btn-primary">Save changes</button>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+            
+                                                       <!-- Button trigger modal -->
+            
+              <!-- Modal -->
+                                                <!--
+            
+                                        <button type="submit" class="btn btn-primary btn-block"><a href="cart.php">Add to cart</a></button>
+                                        -->
+                                    </div>
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="col mt-4" >
+                                      <div class="img-thumbnail" style="width:82%;height:100%;">
+                                          <img  src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhMTExMWFRMVFhcVGBcVFRUYFxcXFRcXFhUXFRUYHSggGBolHRYWITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGxAQGy0mHSUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIALcBEwMBIgACEQEDEQH/xAAcAAACAwEBAQEAAAAAAAAAAAAEBQIDBgABBwj/xAA5EAACAQMDAgQDBwIFBQEAAAABAhEAAyEEEjEFQSJRYXETgZEGMkKhsdHwFMEjUmJy8QcVgpLhM//EABkBAAMBAQEAAAAAAAAAAAAAAAECAwAEBf/EACYRAAICAgIBBQACAwAAAAAAAAABAhEDIRIxEwQiQVFhFDJCcYH/2gAMAwEAAhEDEQA/AEYOYprpOKVrbzTSxxTWTozP2ptyayly3Far7UXIrNtBFRl2RyNqRVp3pkl6eKAs28000doVKTQNErCFjFH2+mmr9HaAM04tkVFtGsX2NDFG2bEVcDFW22FTa2FENsVVeuYM0S6CojSA0yRmmJ9+aY6W5jmq9VoIyKA+IVpXGie0Pjcig7+qilN3qRGKFv6skTQ7M5mj02tHnTTT6usLpNXmnmk1dZNxDGZqkuA0/wBLZCoKxOm1sEeVOtP1ogQeO1dGHJFbZVMba3UBCKBvdVWR5+1KbupZyTJoO4CJac1dZ12gSH39VkE0NrOoIAYMmk1/XMF4z70Cm9qjP1P0K/wLsajx/wBqZFgaSWbJmj1JGK5fIwI8vW1qmQKq1F3tQ73sVGpNgbLL+sqP9aB3zSHW3zugGvDqcVSEWnsTkaTRdX2t5imGp6wm0xzWEs6gzRdzV4o+TJF0jc2M31AoJ7YY4oB708V5a1BWsoyBYU2mzXlUtqpNdVNmNMWzR9virF0oJov+nFejZ6NGD+1qEg1lLNwjFfT+s9OVlIrJXfs/nFJJkpIUW370Zp9Rmiv+wsPOqT0x1NRkSkmPtEZE0wtkUl0qOo4mirbt5VyuwKNB2qvAClydUg5oh2JHFZ/qaEGc0yVkptp6NVZ6gDRlnU1g9Hq2BrUdDs3dQwVIHElt20D1Kg1ladDKTY6Ul8ASfSibP2VuXXVSsAsAxEeEdz9K1HSugLbALqA0AHaYBPcg8+XlTpBHpx+XrV+C/wAjshgvbMJ0/wCwds3FF3dChizCYY7oUQfTNMtR9h7DhLS4tKzO0zvZzAXI/CACM+dau5cx71SCBB7/ANqPtWki69PGujLN/wBMbQDFHhyIE/dX2Htj96yfWejnT3nQEsqxDRzjzr67ZuCp3NBbuAgqIPI4n3rSxxyLWiOT08V0fG7AowCtf1joFhOHW2onEFvpAn86z97pTH/8mF0dwPC490auaeCUf0jxaA/jRVZvFueKjqbTIYcFT60Bc1EVLlJaFk6D7gBoi0gApNZ1Q86LXVYpeTbBGQaQJqT3QKB3mq7t00eVBk9FXUrgUE0g1mvEUbrW5pJfT0p4e52cz2ytb0maLS5VVi0PKrXt0zaukGkRdooe7fqu+xmhvi1SOO9hUQq3qYry7qaAd6gGmrLGU8a7GK6wRXUIAK6txRuKPpSdUjmih1YRWQ1at2NSsI8c1VI7bHl7qJYwKkVoTQaF+TRtxiuCKNAKw9Uuc5GKIRVPaKNtaYRQAVaRViQau+EDxFV3LG3gVStzzwaDSCGDS+lVanpqkZWojWDzq59USORW4oVxQB077OLduqgHJyQOB519Z6N9mdNpUARBu7sfvHzz5VhPsPrNuohwM8MThR7Tz9a+k6u/jE4opKKsbHjVgeoPkPlQF3XRg9qlqbrMCVOaUPqSWW3AyJk+Xv51yybbO+KSQzbWggQf57VB9UDBBxMH070k1K5IV5jkLwD/ALu9Jf8AuDBnwTxMnGMTHeY/WkbY6SPolnUAiAcfQVfb1wUhZH5VgNB1JmCksIGSSxkHy2kmKa3upqhBJCsTtHEEntPnmqRm0I4pmy1NlLqxJEjkYP1r519qfsnetv8AEtOboPmYf9j8orZ9P1k4PJ4/+UdvDAq0EeR/tV5KORbOOeI+MarV3tpVhx/mGR9eKSX/AIlfX+r/AGat3DuU/wB/lPMVjdd0wW2KkRHnUPBZzzw/ZkLdxh2pjprx70bf0A7RQptFeaz9N9E/FQy05kVDWWjHFXdOtDmjdQoFJL0zaH8dozJsM3Y1Vd0BPatCqipKoNaOBxJeAyd7SMvagbxNfQ006kRihtR0y2ewpnha2FYWfMdXcoa3JrfavoVs9qUv0NQcV0JUh1FpGcuWTUEt5rVf9pxVP/aQTScmZcq2KFtCK8rQp0dY4rq2xeEhhpbatUr2mHKmKL0ujIq+7Y8xVjqCulWfDmg+uNtGDRmh1QGKU/aM7hR+AXsXafqxBhqb2uojzrM6bSg980QUZe9YNWaL+qD4BqT6WczSTptzxjdWsS4pWgAUFVHIqECcTUdeCGwa0X2S6EzsHuDHIHp50ApWP/sP0lUBvOp3H7sjA9Y860epEmS3y7e5q2yBAVQAoxQHVTyQMgRPtQk9FoRpibqmtVFYnIXJg8zgAVkrPUG2sZ/2g9h5ChftZ1drVly3LngZJg+EZH9qT/Y7out1pJXwIMkurgDMcxEwZ/hiChKe0dDlGOmP9BqdQ5MIpzk5wYESB5ipdUV0QyANo9I/5rW6L7OkKVciREOhcZiDyx/XIxRo6PZVQbkMoHc8/X9eabx6A5ps/P8Ac17m4x8TQcwRxBPf0Un5Vt+gdUXUoLZO5hxuBIJHZ8YPrWv1/wBmen6gbXRFI4KACMk4xEnuYk+dK732Bs2oexLAem1x6qVgfkK0oxa0LGUr93Q70N8qLcjIlT37Y/Sn5uggef8AP/hrIa+wd2mud0lXPcggZI75AqjpXVXS89l2k4uLJ/CWKihyrQeNmx+IRzwf5ist9rwNm/hgYnzHka0SawOAezYz/m8j70j+0NsvadPSQfY8Uyeyc1owya8EwTmuuPNCWtN4pimemteYqpzBGgkCpaok0xsWBFVXbOaJhTJAmitChbvU9TpxVvSwAYrGO1QZRINL7+ubtTXqt0bTWZs6oN2rMyLW6iwqm3rNxzipaiz3FUokGaBhoEkYoZkYGYovSXZGKIwaJgdNRj7tdVjKa8oBLtLcB70ayAjNA2bJXMVa2r7RRMeDSqDNL+sII9aN/qiKo1h3jitYKM9pXIP3aMfI8qIsaDNT1OkgYoWECtLmnGk3Rk0msgzmnmluiMimMwvp2nDXVGCe08fPz9q+h6DT7BtBlm+8384HpXzXRPF5G4AYHPFfSbOrEAjvxU5stiQfdu7BA4pNrtYIG4wCSPrG0H3mp9U1QEAnLEx5wBz+Rr5dqrd7UsUUmPi29u4kAzcZlYnkAAgewqLnujojDVmtsfZ+3qdSr3RutWpYr+Eknwhh374798U66n1O4Qbdr/DUCNwIEdstED2FWW0Fm2AO/iYnl24EjsOTFKbvUVDARuY5A7D/AFH+1ZypcQLe2Zr7Yf8AUF9NeOlFssVVSzsxzI3YAGRHeazPTvtlrXvqSs22IBCggFZyJ4JiRFH/APUlEulWVtrxDDs4BIE+RGfkDPArK/Zfbaui4/hKkRIMDcImAOZ+Wfr0xkuNHLJPkfYluquTIBHOMex4+RovS64iIaZ4xzHI96weq+2VuNsySCARHHqBz9BXvQetBwyMfCYIMxtbsQe3Iz71yttM6e0fRLsODjnkf3FYr7VaMq1m8rENaUrP+ZWYc/M/nT7p/VAwtsWhgQrgiNwgZxgHP5V79sLJaw+wBiM88gsJj25+VO1aFUqdizS9XXbaloDsAP8AcRMH18P1iiOt66UAPLfoOP56Ul0ujUwWUAAhoH+YDv8Ann1qfUrsmY9BQxprbEyZE9IoBAq5X7gUEFJNF2rRAq9nOMLGsgcVHU6ok4pcqSaKazEZo2AmLJai9NoCKGsXttMberEVtBFnWLXhNZC2Nrelazq1+ZETWWv6ZpwKxrHmmRWGRVGssgcUR0qy23NE6nST2rGF+mU0dbWq/wClI71ZamhZtE2muqJBrq3I1lly+YxS4m5PpWhXSCrDo1qXMTmINjHivApHNO/gCvG0opHkE5i60IHFeXhPam6aYRU10opllD5BINFIq+xpCPanIsivfgij5A+QWLpj5Cm+ivkIEzIbdPoM81FbYqT2xQc00NHM4u0UdT1XiWZI3qMfhEneR9aB0uoS29pV8X3YYH/IQYby8/nTJtMG5oO30RQwZZkNu/cH61Gnejqj6qNbHnXtUAB+XuBXzL7W9XNu6dpMYiDz8/L9q+idbsMbMEHKkbh2xg+9fL+p9LuEwTuUceYyZHrkmnkly2XxvlHRnL+pvXHHLSYHt2FV3tPeJyDkx+Q/YfStLoulMpDRwQfoZ/Wnes6xorWXVw5yU+ESc9leQrCe9XxzT0hXjjXuZiH6Uy2BdJO9rothY81Ykj6AfP6mafQtbWCSDG4x/MAfnWk0tl9c6H4DWdNaO5S/3nbviPQfIetO9bpERfEO08Yxk/Pv8qGWTJrjehP0PVsHt/EMAMWPqWbsfU7j6Sa2uqcuPcR+9Z3R6JCxU4KtAz2YEVpkOBPPf371JSrZL1E6AF0UVTf0E0e98TXj3cUnmOPmxba6aBV50lXpqBXPeFBZTcwUaKDRHwKuF0Vwuij5GbkykaRfKvf6QVcjipPcFFTYeTA7mjHlVJ6ePKjjdqL3KXmCyqzpwKue1VC381e92ismjcgdtPUP6erviTVFzUZig50bkS/p66qzqa6l8xuQUpPevVuzTTVdIuRIH0Bx59s+9D6Tot8kf4ZAMjxYwO8eVbhO6QzhJOgSKlZMyDWiT7MAwGb3jyphp+gWUOFntk/rVFgkFYpGLmGHkaI2EmFBNbROlWAQRbX6URbtIOFA9hTLBXbGWBmEa2QczPlU1sucBCflW5cL5D6V78VYxij4V9jfx2YBm7d6O0fR71wAxAPc1qTZXmB9BXl7U4gdqCxRW5MK9PszrdJuKYA3eo4+tW6kiyhBEmJOJ+VMrusYLzS3W6iBJ/EPmf2qi4rorHBxZmur9dcA7e3EH0nikfT9et9iLkBhycZnyFOOo6FSrlQYHM+fpWR6l064zD4SKtwAfQRG0+1Slt7OmKSWjVtpkOBP0zRd6woQSox5gH9awuk61q7CkFhCwxLKGIE8CRHpIoPqP2m1d1gi8k42Dn9hzTRi/glkerfRu110iAcUHr7guIV3wwyRgmPUVn/6TUsuGW2SM7SfnOCPPiPc0KvRNWrlsGZBO5TAIjAJB4p/DNnIvVYk+xt0i6blwsXGDxOcEnP1rVvex/esl9neln4p3gBwpbbkbkUwSp4kYJXyPOK0bEHvXNmThpmz5ozS4krmM1E3pEVNrJMelQtqBJ8q5+Ls5SNvmo3Go6xaPPY1XqLIg9j2ppQ0GipZiaiHzUhxHf8AtVVyRSNsxxvGrfiyKjcXAgTULoge9M20Yst36gb8+1QWrhAxWTbCUXbhPFFfDO2TVIEe1TF+cdqZa7MCm6ZqDt3ox7Yof4Mg+VCmCjviCuqG1fWuocjH19CFHBrjdBoRLredT+LPlXqcz0uJfv8ASqmu81IEd68e2DWezIqN6oi4asfTEDt270Pc3DB+oHPlSNMdNEnuGqvjUO9+J/aKrd5GP5+1SbKJBly55eVCNenmqVvRzXj3B6ULDVHl66P5+1LtU6EcmZiDOf2q/UHPGB70FeKxJII8zx2jJ496FhIapshYwcGfXAx7VmftBZKjcpgjCkMZ8j8q019YyWJB7EZEYj0pBr9UytuQ89u05GJ7nFZugLszvwSLDG4CZIB8PB4kEcev+2hX1hUi6NsWyF28lgQQc+R/tWvuWFe3mRvydpk5ByPIg9vekWt6OAFfBEwx48IOJg+vnTJ1sEkppxYfY6ksA7Gz2UqSMcESDNXHVqwIBcEwODIniIpBrLm25v2kK4iBJ2sAOe8ECfqO1F2NUwKTxBIA5gEbSfz+pp/5EjhfoMVWrC9PaK3VAYl53OSCNqQV2jGS26MfOnmm0oJLTxx61XoUtMt68SNy2yQQ3puCsJgEQTBg4FFXjsW5eX8HiieQniYfMA1HN75JshLHGGl0Fbtp4kmuv2lC7j3YY/L96T6vrQcM1ojwMQZxmYjP60w09z4ln/WJPPYHOe/b6iltO0JaLwmDGBj60BfvkfeIE/wVZavFkcDusj3HaflSnUXcgscTPIJ4DcTjnE1PJLWgMY6h2kYiFzVjwBIIyKC1+tU5+8GAgTnj+CpWiPhGSGaAYHaYxHzoqrZk9hrgAc5AoG7G6GkAicfTH5URqLgJB2ngYjE+3yoMmALuDuITaROcER5dqWZmV6ENDCRAPJ55xR72oZYMgfn51VrriAi1B+IJkiBEQYx5T+VR018EKwJjIz7/AJ0sIpaNpaCPi4nBz/fyqOodUubfwkSPbn+9L1BDMJ4JEc5Oau1V9YtBhnaB6iDn50FktbNZc19BgkyePYc5qF+54B6zP7VVfsqLhNw8KrqP9JPeOMirAA9sbezYzma26/TWLDfPqIxEeVeVNEudkJyRMjMGDXlLxEPrvxBt3ExET5Z7VU12WABgg59oms71DqofTuRyRbbb3y6qRHyFG2dWDdY+Sg/X/iu/yJvR6qleh6bmQPP+1WNcAjMEmB75gflSXUa4K1uT96QPeP8A5U79wspAx5HyIyp+opuY/wBjS5eZXRTG15Wc4YCQPmAaPtqPMSPOsx1DWFrJI+8IOMw69vqI+dX6PWM7WjmCpP12kH8/zorIroQdXtCjDKRI5/vSm90+4gJgFR65P7VdoepOzFG/zMAfQGAPpRNy/tPi4OI5k0z4yVhjJiC5fiPEJ9RVNq/kk/l+1U3NELl2/wDDJDrLBTiR5LSgatk8UkRg/PiudyrYyyqhxqTyQe//ABSfqNwC05GMjk9gQZoXXdbMTA2hhv8A85BGNmeRkxFX6u2r2pUhlZHPeGHvM/MZyKz2tDSlpo9uXi0ieTHn7xQVzSDeN5w0n0kAHg+0UbqOp2UZhEvu2KBiTBmJGeJ+dJT1M3H2kjctwKqiAIJgyT+fzpJSXROWZfAbrtMAAR4QG+92iJOTwMd6FvkgkbgQRBngkgkYkmf/AJRXUNS/w4WSn3eRuEcz5gyR8qVW7gdnQDxBE3Fp3QkmdvdSLn3gJBXPaWTvoHlpq+mWNow1tCLe1mhSOCSSdnfE8dvqTQmovkSygkW2MAmAMMwiTxAn5UX1C8FBVbhLgEEKZG0wXDEjJyDjHPNe3FUhmXAO3cB23YJBiShBiOx3e9LKVWSlm4yl9F3TRm8I3LctvuA/D+JZjglXYe4HnRHVTseBJDBlJ4Gbe9TnEYcTS61ahvhshDlRBO5drWwCu7AMGGGfIVR1DVt8RN67ZVQAV4PwgBzzMnHBzS8tHHKa2gPQwouZ+6x5gAzG2ZwMn6071etFtyd34ASB/lbGPov/AK+lKdIhhy6sVNy2IPAbYwG4ecHd/wCNUG+wZTEqBtJeTtC5klRnLMMjjHlWVEeWqNIusUkuhwpiACd24HAHyP0oV9Pm2q5mDzgmTJA9Z/WgVU2yUJKHwPzKldzCSV+f0mitxDeIz8O9seJiHBXE5iQI45pWM5X2e/03jNtmAG4kQy4ETE9sEc0X0oSPGQC0EGZhYGZHHAEGgdNowp3MzH7zCABMEgHnGGHh7yc4onTadENsiRuXYwJmHUiewIEEYPHelS+UaOmGf16EgzJgEEERsAyTn5/KlfxnS6rKZCyCrTAblWC+YUg5qOmtqDcHHhIIWIIwxAJys+nnVbMSGRYMWmuA/iZwBuG3kCDzHlQlZmyF1mcI6hslgfMyBDAfWutOVCOSQCrcrK5OIPnP9qjZxvAc7V2weeUB2GYxLAewNW29UgZj4rTMBwZt7oBO6TKfIEd6CiJqyKawB1dp2hgrRxJwJzR8zIg4Y49DlD+RpW+ncB5B8ZFsGV2k/hJJwFmDJj3FEdNvlmMiIgMDnKSPnyKDjoKYy1dwNceR4YUBZ5KrA4ziTQum1hCsoBnDMAJOOT+U0BrL53dzucmRzniB7wIpo9vZMjLbFMgAkN94D3MDGYoq22xk7ZO7bE+F9qwCAe0gE/nXUo1eluMxZHTaYjxtiABGVmuqlw+RXN/Ron1iOwAMHdyOCJDQfmJo7pevAS3cYHxBQT5bRGfnWO0N7KzzM+8TTy07GAD4R2/WkjNp/p0Y8rvZpOtAOog5BkEEGCKsbqq+EE7uA0eXnFZW9qGDxbkL/wAcfKpawTbI/ESQTHC9j+dO81W0Webdoe6bqoL30gFNx79iCJ/T6Ux6H1AKbazO1X94YggVielLlLbTAQFjwTIzHsTR2hVt0+IqBtLAxweDRjlaaEjldmrvakfEKqYh2b/2gj+etH3dRutY5HiHmSpk1mtPp3ZrpwzqAw8pGSJ+QFenWPaKtu3WyJUejj+fSq8+2y3kpDJtbbNwXQIJYA+kjmsb9oGY3pGFLEGOJnmi799wygcGieqFUXc2QwBiMGf2Nc6m5xZHyNpizqOh4DMNuG8MtEdpI5+VL+n6xg1uxghrg4Pk8kgjEECSBwe2afWrihh4dyqVlTwwPM/zyq3W6S2l0XLagIFuNb/0swM47eXpNPCfwxnmbjXyjJ6nVbrlomQ7BLi7QdzMMZ8hDSI86I6j05doe0CGuPJMnEoSxA9xM13wwQWFsNfO3aykjYvxPED68H1BPnR9tmtFC4ELLZz4SjL9YJpcrUX+EJStluk04dWNwwA3/sBBAjtndQev6ffF8X7UBFXaCcnacYGJA3DHufSmTou3JZQ5aQAAAO23196re0TuCON52kTugCIWYMZI+pFDFOXT+B1N1X0JNbZKuXG0blKkLJAYS23IESI/TtUrLH4qJcwu8BgcEAxIHIGQJHvTw3l2hjtfY21vIP4Ru9Y7T50ru9Id3dlPhXbJPZiQnAHEZNGTdk5t3oK1DF7o2qzMjlSAJMBZJgZjaJ/8ah1WxK2iZ3JMA8EKRPh7YWZ8gfWi9Dae3qVYRte34yZ8LDw5wDMHuAcn2A4vbgpJJYAQVEjdhjDeWCP/ACrXxexV9sVarTX7aA7CPiOrooON33kU+Ulduez+tG6fpz3Euhgy22typmMhy4BmTgkyO/nTI6JbtsWi3iI3iPEAZLLHt5T6TVelLputqSYyPFwQcfMwKNqLSNxFVm2S1uUJBi20ifCY3LOB5Hj9aM1Cbl1QQEsWV1BzJhSucAywIom6YuRtwH3FSBIkLB3QeDiJ/WqtLYL9h4lMluJBU7CPafefSlg60LRSfCm+AGV2I9Inn1kVfcc23ZwJQulyPJyssPnzx2qd7SM2ldmDTtIP++DI9YMY8oonUO2wIixddSRwDKCQpYkbcCMEHxYNbi0w0L9MVZ1Y2inxVVCpBBtugMyTB8SlO0GG9Ko1NgIpugS9sODBY75IxnjCx7RVt47Xs+BrRuBnZTu//W16k+Ild2e+DkimigGSP8wI8omc/OmmthrYi6jZJS6qKqqpGJP4dqxkwZhjnOTFA3tIS6Oc2WuFW2DAMEQATjEQfL6U51NzJm394yQ8nsYYZzJPcdqqsAGyWJH3nCgACdwBEwO0VKM60LSso1OnNxFAaQoclcjxhT95uDLiIx3jmu0y3GG8SVhTGBBBE5bHIPPmfWrLd3arbTtR2JI58SxuOfM5ip2r5hysMgnDSe7cKTnMt+tFS0akD2un7mRTdQZJVmDQ0qW2DGT/ADyqOtZpY7tobwYEDdngduw9JozWsVsq64VGBuBYJ2gggZ8hzmDQn9TutsV2soDHa5iN0y5VTllk9/2pktJhaSRBdI5AKISsCDxIiurtN1K4VBNq25MncbZYmSTk/wAjiureKJvaFn4YAI+9zRdqwWSZgelJLDh4zGKK0l8iUntUk23sCl9jNrkAEgSBAI7+/wBKlYvgzuOGx8gMR68/SgLv3asXxKCBkR+VGMnzobk7LkZrd7cLUWyNoJ9ufTNR+K4YhGgHlRxj/mrBqSUYMZAEifeaSDWNc3EdiD61SVvoLpLRq+ldY+E6sFJ3YIOJJ4oPU3eMjLkKCDHiJMZ4gk12gO4L4QY5n9aF198lRA8SOGz6HP5GtG+KTY1+0ZXreV81zQ+o1O6FPAx7TV2sDFQ69xQVrT8Dk8mfelacJaFZbtnfnK7RA7jvU9VfYWgTIWcHGQeRmpWdSnxGAGREnt/zRPwDdhZm2pmO3tRcPrsZRsUa+5FtEtMqtKgbSV77hO4kvnzJ9IxUtVcuISxBEYBPcRB+WaKOkXfJtoVSY3/d7HA4PfFXdYffYKgSYmfStKHKHu7BJOhdZJdRmZyRV9nSFbguLlWX4dyc/dO5SPKD+goTS23F2ABtKiCM8c/qKcdOIAYEZzUcdxl/sEDtNYt7ru1YDkXCv+qAJ+e2uFpxb2jDTJPn4hE/KoC5tBAGW7n07V61p2ClWkk7SPXzqm6HSs8sW33sxWAWAxxwJxVekPwi6OhBFx3QxCkHaQQw8iflFMf6dlKoWH3gSJrzW6Bb7syGHQRjviDn+cCqOL39m4fR4lpll2Zc9iOYpbprkAscAtgwcTzB+Qo0owi2W3cn24FW2AbifD3AKvIgfwUtNyM1sGs5W6rHxfeE8wQAWDDzAFDaSwfHdBMj/D2xzAVgR6zj2NNLdkGYG4fdn+1Qa3tQj8QaUj1ADbvOqcWuwfrJPc/w7iNncEcGfxRn2lYpaenNdNtFO0CZYgkexyOxbPnFH2rJ3GcyMenaarfXsjMgTcTnyP070JPacuujUVajQBQEHjhiwaRuk+IxgwIAHehBfuLKj8SggGCPbHzq3bcYFgxVjkQYI2jI+n6UNajwqmbgZnY+e/t6RB/9qnJ60I0C3bh4ZQrRMKpgEs2IzGDPvXIxS0qKpbxl8g4UN3HcZjNX9SvbSB3O4GOZhcH5GrdFctxtcspFoqrcg7ufpAz60O5UzKNurKbl8kW0ugFUJAifuAgQYMTmcQYI5rrV4C2FtjdDNtcj8Jnwkf5hIPpnzqdlFIuM8qPAEVYgQAp49p+dRuWhaUqg9e8mTgn5ED5VtqwtNFHUEUfD9VBKiJAYTBgcjjdB+7OaHNtGwkpaAAYMBMInikzPMHtJbjBpp1vTl1suo++oRiOVIEccR6+lDvct6YDaPET4k3TG4Ec9yAYqiVaA0LzqL9slLGnttaBO0vdcMZySQHAGSe1e16NYxzAMknIE5M11U8r+h1kAtKuQ3FEax4IZeQc15XVzX7v+kq2E3JYBhTfRkhBPlXldR6yGiD661/htHrQf2XRN7BhLGurq6I6mMu0P7i7JjE0s1VkhAR96S31rq6gl2gv5Den6ovaA/EKqcbDu78V1dWn/AFszeip7H+JvHcUF1Tq72V8HB5rq6oqK5gk2loK6fdN214vEDRS39kY5xXV1M9NGT9tnvTri22KkTuyD6GjNQkSw969rqMv6v8HfQCpcofNWketFdK1m5lxyRNdXUlvnEaOmgrXWGW6zuZBIgeWKB6S14XLrpAVvOP0rq6uuUUnoEuwvptr8btLelX6coDIHiKsJ85Pf8q6uqail0VoA6ext238ZMtx25xFDWrzm5PA8prq6pTb5Ig1tIO6mW+GCDDNAoUaMtb3sfEAZ/cGva6qSSb2OlsJ/oBdtIoBVSOZzxSxFNu4fSQfWIg/L+9e11R9R7UmjTS7KAVZrh/GrzxzIj9IorS6ZGaHXdtH5GurqF3OLYIgfWrdtGUKTv3CR2jMVbZ0ytbFxshQSRny/OurqdRXkYj3Jleg1ZVSpMhlPJODwIpVessLZuHJJKe+SJz7V1dQjuOzNWi/R9PvMispEEYzXV1dTDrGqP//Z">
+                                          <div class="caption">
+                              
+                                              <h2>Poodle</h2>
+                                              
+                                              <p>price:Rs.36000.00</p>
+                          
+                                                      
+                                              
+                                       <button type ="submit" class="btn  btn-block btn-dark" data-toggle="modal" data-target="#exampleModalScrollable">Buy Now</button><br>
+                                          
+                                               <button class="btn btn-block btn-dark" (click)="save1('32000','poddle')"> Add to cart </button>
+                                                             <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                                              <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                                                <div class="modal-content">
+                                                                  <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                      <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                  </div>
+                                                                  <div class="modal-body">
+                                                                    ...
+                  
+                                                                    lsbva;
+                                                                    ak;containerlcmslmc
+                                                                    smcklansk;cn
+                                                                    a;8jRynLgenrzK57RvSG1C6nG4Ekho8ztwYHc8QHGflP8Adsmnjsqum6ey4o1GFsOBncACWuIjcARBnMg85KxRalbD5qgBqHHGzZa06TCz9Om6m5jj5XABzJfzwcuA9eqD17GlaVvMx5ad22rSeWuDmvLYJHPEdU16rwwGvo1PBZVqNgeICGTgwXUwcBuOknEKDjmwLbamWgeR7QcYAILTA7SRhUSyXHXYKhxad9lvhXV316pp068u5tbV2gkDmA4c
+                                                                    sx;xN
+                                                                  </div>
+                                                                  <div class="modal-footer">
+                                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                                                  </div>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                  
+                                                             <!-- Button trigger modal -->
+                  
+                    <!-- Modal -->
+                                                      <!--
+                  
+                                              <button type="submit" class="btn btn-primary btn-block"><a href="cart.php">Add to cart</a></button>
+                                              -->
+                                          </div>
+                                              
+                                              </div>
+                                          </div>
+                                          <div class="col mt-4 yoyo">
+                                            <div class="img-thumbnail" style="height:100%;width:82%;">
+                                             <img src="data:image/jpeg;base64,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">
+                                            <div class="caption">
+                                
+                                                <h2>Border Terrier</h2>
+                                                
+                                                <p>price:Rs.36000.00</p>
+                            
+                                                        
+                                                
+                                         <button class="btn btn-block btn-dark"  >Know More</button><br>
+                                         
+                             
+                                         <button  class="btn btn-block btn-dark" (click)="save1('36000','Border Terrier')" data-toggle="modal" data-target="#exampleModal"> Add to cart </button>
+                             
+                              <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"  *ngIf="this.modalflag==true" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body">
+                                      Your Item added successfully
+                                    </div>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                                        
+                            </div>
+                                                
+                                        </div>
+                                    </div><br><br><hr>
+                                    
+                                    <div class="col yoyo">
+                                      <div class="img-thumbnail" style="height:98%;width:82%; transform: translate(270%,-198%);">
+                                       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcT-6tmymcxwiMrZNSmB_WWVQzjjU8fAcZUCkKcu0TQzBKTdmBjB&usqp=CAU">
+                                      <div class="caption">
+                          
+                                          <h2>YorkSheir terreier</h2>
+                                          
+                                          <p>price:Rs.36000.00</p>
+                      
+                                                  
+                                          
+                                   <button class="btn btn-block btn-dark"  >Know More</button><br>
+                                   
+                       
+                                   <button  class="btn btn-block btn-dark" (click)="save1('36000','YorkSheir terreier')" data-toggle="modal" data-target="#exampleModal"> Add to cart </button>
+                       
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"  *ngIf="this.modalflag==true" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                Your Item added successfully
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                                  
+                      </div>
+                                          
+                                  </div>
+                              </div><br><br><hr>
+                              <div class="col mt-4">
+                                <div class="img-thumbnail" style="width:82%;height:100%; transform:translate(0%,-105%);">
+                                    <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQN_JpFGpc-6x4TlLyNTLba-GlU8gQ72BaG-rZbHCXfZ7tXGO46&usqp=CAU" >
+                                    <div class="caption">
+                        
+                                        <h2>Beagle</h2>
+                                        
+                                        <p>price:Rs.36000.00</p>
+                    
+                                                
+                                        
+                                 <button type ="submit" class="btn  btn-block btn-dark" data-toggle="modal" data-target="#exampleModalScrollable">Buy Now</button><br>
+                                    
+                                         <button class="btn btn-block btn-dark" (click)="save1('32000','Beagle')"> Add to cart </button>
+                                                       <div class="modal fade" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-scrollable" role="document">
+                                                          <div class="modal-content">
+                                                            <div class="modal-header">
+                                                              <h5 class="modal-title" id="exampleModalScrollableTitle">Modal title</h5>
+                                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                              </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                              ...
+            
+                                                              lsbva;
+                                                              ak;containerlcmslmc
+                                                              smcklansk;cn
+                                                              a;8jRynLgenrzK57RvSG1C6nG4Ekho8ztwYHc8QHGflP8Adsmnjsqum6ey4o1GFsOBncACWuIjcARBnMg85KxRalbD5qgBqHHGzZa06TCz9Om6m5jj5XABzJfzwcuA9eqD17GlaVvMx5ad22rSeWuDmvLYJHPEdU16rwwGvo1PBZVqNgeICGTgwXUwcBuOknEKDjmwLbamWgeR7QcYAILTA7SRhUSyXHXYKhxad9lvhXV316pp068u5tbV2gkDmA4c
+                                                              sx;xN
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                              <button type="button" class="btn btn-primary">Save changes</button>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+            
+                                                       <!-- Button trigger modal -->
+            
+              <!-- Modal -->
+                                                <!--
+            
+                                        <button type="submit" class="btn btn-primary btn-block"><a href="cart.php">Add to cart</a></button>
+                                        -->
+                                    </div>
+                                        
+                                        </div>
+                                    </div>
+                            
+            
+                                                             
+       
+                                    
+   </div>
+</div>
+
+   </body>
+   </html>
