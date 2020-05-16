@@ -8,7 +8,6 @@ import { CartComponent } from './cart/cart.component';
 import { AuthGuard } from './auth.guard';
 import {PaymentComponent} from './payment/payment.component';
 import { HomeComponent } from './home/home.component';
-import{AccessoriesComponent} from './accessories/accessories.component';
 import {GroomingComponent} from './grooming/grooming.component';
 import{VaccineComponent} from './vaccine/vaccine.component';
 
